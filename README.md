@@ -5,4 +5,4 @@
 
 
 <h4> Aqui o link do GitHub Pages, pra vocês testarem</h4>
-<h3> Só clicar aqui :)) </h3>
+<h3><a href="https://gustavorice.github.io/todoList/" target= "_inblank"> Só clicar aqui :)) </a> </h3>
