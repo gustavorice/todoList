@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.todo {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  gap: 16px;
+}
+
+#p1 {
+  font-size: 12px;
+  color: hsla(260, 27%, 47%, 0.943);
+}
+
+.todoTitle {
+  display: flex;
+  color: hsl(260, 35%, 60%);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
+  gap: 20px;
+  font-size: 3rem;
+}
+
+.todolist {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.todo__item > input[type="checkbox"]:checked + div {
+  text-decoration: line-through;
+}
+
+.todo__item {
+  transition: all 0.5s ease;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  box-shadow: 5px 11px -5px rgba(0, 0, 0, 0.25);
+}
+
+.todo__item > div {
+  width: 80%;
+  font-size: 25px;
+  color: rgba(240, 223, 234, 0.795);
+}
+
+.todo__item:hover {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  background-color: hsl(260, 35%, 30%);
+  -webkit-box-shadow: 0px 16px 18px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 16px 18px 0px rgba(0, 0, 0, 0.12);
+}
+
+.todo__item > input[type="text"] {
+  border: none;
+  width: 80%;
+}
+
+body {
+  background-color: hsl(260, 35%, 20%);
+  font-family: "Roboto", sans-serif;
+}
+
+.todo__item > input[type="button"],
+.todo__item > input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  -webkit-box-shadow: 0px 16px 18px 0px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 16px 18px 0px rgba(0, 0, 0, 0.22);
+}
+
+.adicionarTask {
+  display: flex;
+  background-color: hsl(260, 35%, 40%);
+  width: 100%;
+  height: 70px;
+  justify-content: space-evenly;
+  padding: 10px 0;
+  box-shadow: 5px 11px -5px rgba(0, 0, 0, 0.45);
+  margin: 15px;
+}
+
+.adicionarTask > input {
+  border: none;
+  color: white;
+  background-color: hsl(260, 35%, 40%);
+  width: 90%;
+  outline: none;
+}
+
+.fraseAleatoria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 140px;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.1rem;
+  color: hsl(260, 35%, 80%);
+}
+
+a {
+  text-decoration: none;
+}
+
+/*animar titulo*/
+
+h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.025em solid rgb(255, 255, 255); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(255, 255, 255);
+  }
+}
